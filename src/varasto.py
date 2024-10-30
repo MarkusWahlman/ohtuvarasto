@@ -9,12 +9,12 @@ class Varasto:
         if alku_saldo < 0.0:
             # virheellinen, nollataan
             self.saldo = 0.0
-        elif alku_saldo <= self.tilavuus:
+        elif alku_saldo <= self:
             # mahtuu
             self.saldo = alku_saldo
         else:
             # täyteen ja ylimäärä hukkaan!
-            self.saldo = self.tilavuus
+            self.saldo = self
 
     # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
